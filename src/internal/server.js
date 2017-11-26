@@ -1,4 +1,4 @@
-import { spawn } from 'child_process';
+import { exec } from 'child_process';
 import qs from 'query-string';
 
 
@@ -40,7 +40,7 @@ const optionsToCommandArgs = (options) => {
 };
 
 const startStorybookServer = (options, logger) => new Promise((resolve, reject) => {
-  const storybook = spawn(options.cmd);
+  const storybook = exec(options.cmd);
 
   storybook.stdout.on('data', (out) => {
     const str = out.toString().trim();
