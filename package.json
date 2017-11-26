@@ -16,7 +16,8 @@
     "clean": "rimraf lib",
     "prebuild": "npm run clean",
     "prescreenshot": "npm run build",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
